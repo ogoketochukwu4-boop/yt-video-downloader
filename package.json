@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "build-client": "cd client && npm run build",
+    "prepare": "npm run build-client"
   },
   "dependencies": {
     "cors": "^2.8.5",

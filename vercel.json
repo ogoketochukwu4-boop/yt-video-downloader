@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node",
+      "config": {
+        "registries": {
+          "https://registry.npmjs.org": {
+            "default": {
+              "noCheck": true
+            }
+          }
+        },
+        "maxLambdaSize": "15 mb"
+      },
+      "name": "yt-downloader-backend"
+    },
+    {
+      "src": "client/package.json",
+      "use": "@vercel/node",
+      "config": {
+        "registries": {
+          "https://registry.npmjs.org": {
+            "default": {
+              "noCheck": true
+            }
+          }
+        },
+        "maxLambdaSize": "15 mb"
+      },
+      "name": "build-frontend"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "server.js",
+      "continue": true
+    },
+    {
+      "src": "/(.*)",
+      "dest": "client/dist/$1",
+      "continue": true
+    }
+  ]
+}
