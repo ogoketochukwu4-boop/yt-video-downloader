@@ -1,0 +1,19 @@
+{
+  "name": "yt-downloader-backend",
+  "version": "1.0.0",
+  "description": "YouTube video downloader backend",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "ytdl-core": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
+}
