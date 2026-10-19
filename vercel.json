@@ -13,8 +13,7 @@
           }
         },
         "maxLambdaSize": "15 mb"
-      },
-      "name": "yt-downloader-backend"
+      }
     },
     {
       "src": "client/package.json",
@@ -28,8 +27,7 @@
           }
         },
         "maxLambdaSize": "15 mb"
-      },
-      "name": "build-frontend"
+      }
     }
   ],
   "routes": [
